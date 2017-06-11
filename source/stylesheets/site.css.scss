@@ -1,0 +1,99 @@
+* {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+  outline-style: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$white:      #fdfdfd;
+$off-white:  #f3f3f3;
+$green:      #0bca48;
+$dark-green: darken(#0bca48, 10%);
+$lime:       #00e508;
+$dark-grey:  #191919;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:focus {
+    color: inherit;
+    outline-style: none;
+  }
+}
+
+p, h1, h2, h3, h4, h5, h6 { line-height: 1.5 }
+
+h1, .h1 { font-size: 5rem }
+h2, .h2 { font-size: 2rem }
+h3, .h3 { font-size: 1.5rem }
+h4, .h4 { font-size: 1rem }
+h5, .h5 { font-size: 0.8rem }
+h6, .h6 { font-size: 0.6rem }
+
+.extra-bold { font-weight: 800 }
+
+.bg-white        { background-color: $white }
+.bg-black        { background-color: black }
+.bg-off-white    { background-color: $off-white }
+.bg-green        { background-color: $green }
+.bg-lime         { background-color: $lime }
+
+.color-white      { color: $white }
+.color-dark-grey  { color: $dark-grey }
+.color-black      { color: black }
+.color-dark-green { color: $dark-green }
+.color-green      { color: $green }
+.color-lime       { color: $green }
+
+.shadow-1 {
+  box-shadow: 0 5px 20px rgba(black, 0.2);
+}
+
+.button {
+  display: inline-block;
+  border-radius: 10em;
+  padding: 0.5em 1em;
+}
+
+.pointer { cursor: pointer }
+
+.bg-contain {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bg-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.input-reset {
+  appearance: none;
+  border: none;
+  background: none;
+  border-bottom: 0.1em solid currentcolor;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.asset-atree-render {
+  background-image: url(/images/atree-render.jpg);
+  background-position: 50% 10%;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  width: 50%;
+  margin-top: -4em;
+  margin-bottom: -8em;
+}
