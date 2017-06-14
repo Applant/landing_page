@@ -9,10 +9,11 @@
 
 $white:      #fdfdfd;
 $off-white:  #f3f3f3;
+$light-grey: #ececec;
+$dark-grey:  #191919;
 $green:      #0bca48;
 $dark-green: darken(#0bca48, 10%);
 $lime:       #00e508;
-$dark-grey:  #191919;
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
@@ -43,8 +44,9 @@ h6, .h6 { font-size: 0.6rem }
 .extra-bold { font-weight: 800 }
 
 .bg-white        { background-color: $white }
-.bg-black        { background-color: black }
 .bg-off-white    { background-color: $off-white }
+.bg-light-grey   { background-color: $light-grey }
+.bg-black        { background-color: black }
 .bg-green        { background-color: $green }
 .bg-lime         { background-color: $lime }
 
@@ -63,6 +65,11 @@ h6, .h6 { font-size: 0.6rem }
   display: inline-block;
   border-radius: 10em;
   padding: 0.5em 1em;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .pointer { cursor: pointer }
@@ -88,12 +95,28 @@ h6, .h6 { font-size: 0.6rem }
   font-weight: inherit;
 }
 
-.asset-atree-render {
-  background-image: url(/images/atree-render.jpg);
+.asset-unit-render {
+  background-image: url(/images/unit_render.jpg);
   background-position: 50% 10%;
   background-size: 200%;
   background-repeat: no-repeat;
   width: 50%;
   margin-top: -4em;
   margin-bottom: -8em;
+}
+
+.asset-unit-render-2 {
+  background-image: url(/images/unit_render_2.jpeg);
+  background-position: center 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 60px 60px #0bca48;
+  opacity: 0.5;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(2);
 }
