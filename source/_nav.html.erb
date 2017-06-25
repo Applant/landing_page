@@ -1,6 +1,16 @@
-<nav class="bg-green p2 flex justify-between items-center shadow-1 relative z4">
-  <%= image_tag "hamburger.svg", class: "pointer mx1", style: "height: 1em" %>
-  <a href="#" class="button bg-lime circle bold caps">
-    Join Here
-  </a>
+<nav class="z4">
+  <div class="relative">
+    <div class="flex justify-between items-center p1 relative bg-green shadow-1 z4">
+      <%= image_tag "hamburger.svg", id: "hamburger", class: "pointer mx1", style: "height: 1em" %>
+      <a href="#" class="button bg-lime circle bold caps">
+        Join Here
+      </a>
+    </div>
+    <div id="menu" class="absolute bottom-0 bg-green flex flex-column shadow-1 z3" style="height: 100vh; max-width: 24em; width: 90%">
+      <%= link_to "Home", "/", class: url == "/" ? "p2 bold bg-dark-green" : "p2 bold" %>
+      <%= link_to "Atree", "/atree", class: url == "/atree" ? "p2 bold bg-dark-green" : "p2 bold" %>
+      <%= link_to "Growing", "/growing", class: url == "/growing" ? "p2 bold bg-dark-green" : "p2 bold" %>
+      <%= link_to "Vertical Farming", "/vertical_farming", class: url == "/vertical_farming" ? "p2 bold bg-dark-green" : "p2 bold" %>
+    </div>
+  </div>
 </nav>

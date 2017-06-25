@@ -7,7 +7,8 @@ $(function() {
   var navHeight = $nav.innerHeight();
 
   $(window).scroll(function() {
-    if ($(window).scrollTop() <= breakpoint) {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop <= breakpoint) {
       $nav.removeClass('fixed top-0 left-0 right-0');
       $nav.next().css('margin-top', 0);
     } else {
@@ -24,5 +25,9 @@ $(function() {
   $('#what-nav').click(function() {
     $('.what-section').show();
     $('.specs-section').hide();
+  });
+
+  $('#hamburger').click(function() {
+    $('#menu').toggleClass('open');
   });
 });

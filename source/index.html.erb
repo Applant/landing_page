@@ -33,11 +33,11 @@
   </div>
 </section>
 
-<%= partial "nav" %>
+<%= partial "nav", locals: { url: "/" } %>
 
-<section class="bg-off-white color-dark-grey p4 shadow-1 relative" id="press">
-  <h2 class="extra-bold color-green center">As seen on</h2>
-  <div class="flex py4">
+<section class="bg-off-white color-dark-grey p4 relative" id="press">
+  <h2 class="extra-bold underline color-green center">As seen on</h2>
+  <div class="flex py4" style="overflow-x: scroll">
     <% press = [{
       logo: "forbes_logo.png",
       content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
@@ -65,22 +65,25 @@
     <% end %>
   </div>
 
-  <div class="py4 mx-auto flex justify-around" style="max-width: 64em; width: 100%;">
-    <div data-aos="fade-right" style="max-width: 24em; width: 100%">
-      <h3 class="color-green extra-bold mb2">Meet aTree</h3>
-      <p>
+  <div class="py4 mx-auto flex flex-wrap justify-around" style="max-width: 64em; width: 100%;">
+    <div class="col-12 md-col-4 mb4 md-m0" data-aos="fade-right">
+      <h3 class="color-green extra-bold underline mb2">Meet aTree</h3>
+      <p class="mb3">
         Applant has designed a beautiful vertical garden call aTree, which is perfect for urban households. It’s easy to use, low maintenence and allows you to grow 30 plants every month in the comfort of your own home.
       </p>
+      <a href="/atree" class="button bg-green color-white bold mb3 md-m0">
+        Learn more about aTree
+      </a>
     </div>
     <div class="asset-unit-render">
     </div>
   </div>
 </section>
 
-<section class="bg-green color-white p4">
-  <div class="flex justify-between items-center mx-auto" style="max-width: 64em; width: 100%;">
-    <div style="max-width: 36em; width: 100%">
-      <h3 class="extra-bold mb2">Grow. Our lives depend on it.</h3>
+<section class="bg-green color-white shadow-2 relative z-2 p4">
+  <div class="flex flex-wrap justify-between items-center mx-auto" style="max-width: 64em; width: 100%;">
+    <div class="col-12 md-col-6">
+      <h3 class="extra-bold underline mb2">Grow. Our lives depend on it.</h3>
       <p class="mb3">
         By 2050, the estimated population will be 9.5 billion people with most of that population growth in cities. We will need to produce 50% to 70% more food to feed everyone that is ef cient and sustainable <a href="http://www.worldbank.org/en/topic/foodsecurity" class="extra-bold">(source: worldbank)</a>.
       </p>
@@ -88,7 +91,7 @@
         Sign up to be updated
       </a>
     </div>
-    <div class="center flex flex-column justify-between">
+    <div class="center flex flex-column justify-between mx-auto mt3 md-m0">
       <div>
         <h2 class="extra-bold">7,500,739,327</h2>
         <p class="extra-bold">current world population</p>
@@ -109,7 +112,7 @@
 
 <section class="bg-off-white color-dark-grey p4">
   <div class="mx-auto" data-aos="zoom-in" style="max-width: 48em; width: 100%">
-    <h3 class="extra-bold color-green mb2">What is Vertical Farming?</h3>
+    <h3 class="extra-bold underline color-green mb2">What is Vertical Farming?</h3>
     <p class="mb3">
       Vertical farming is the practice of growing plants on a vertical plane in water, not soil. It’s called hydroponics. This technique is all about optimising space, allowing more plants to grow with less room required.
     </p>
@@ -121,7 +124,7 @@
 
 <section class="bg-white color-dark-grey center">
   <div class="p4 relative z2">
-    <h3 class="extra-bold color-green mb2">The Growing Possibilities...</h3>
+    <h3 class="extra-bold underline color-green mb2">The Growing Possibilities...</h3>
     <p class="bold mb3">Under the right conditions - aTree will pay for itself in as little as a year.</p>
     <a href="/growing" class="button bold bg-green color-white">
       What you can grow with applant
@@ -133,11 +136,11 @@
 <section class="bg-black relative p4">
   <div class="absolute top-0 left-0 right-0 bottom-0 bg-cover" style="opacity: 0.3; background-image: url(/images/get_growing.jpg)">
   </div>
-  <div class="mx-auto p4 flex items-center justify-around relative z2" style="max-width: 48em; width: 100%">
-    <div data-aos="fade-right">
+  <div class="mx-auto p4 flex flex-wrap items-center justify-between relative z2" style="max-width: 48em; width: 100%">
+    <div class="md-col-6 col-12" data-aos="fade-right">
       <h2 class="extra-bold">Are you ready<br/>to get <span class="color-green">growing?</span></h2>
     </div>
-    <div data-aos="fade-left">
+    <div class="md-m0 mt3" data-aos="fade-left">
       <p class="bold mb2">Pre-order now</p>
       <input
         class="input-reset color-white mb2 block pb1"

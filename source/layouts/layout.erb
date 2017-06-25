@@ -9,6 +9,8 @@
     <title><%= current_page.data.title || "Applant | aTree in your home" %></title>
 
     <%= stylesheet_link_tag "https://unpkg.com/basscss@8.0.2/css/basscss.min.css" %>
+    <%= stylesheet_link_tag "https://unpkg.com/basscss-responsive-margin@1.1.0/css/responsive-margin.css" %>
+
     <%= stylesheet_link_tag "https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" %>
     <%= stylesheet_link_tag "site" %>
 
@@ -17,7 +19,9 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body class="bg-green color-white">
-    <%= yield %>
-    <%= partial "footer" %>
+    <main>
+      <%= yield %>
+      <%= partial "footer" %>
+    </main>
   </body>
 </html>

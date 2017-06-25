@@ -41,14 +41,26 @@ h4, .h4 { font-size: 1rem }
 h5, .h5 { font-size: 0.8rem }
 h6, .h6 { font-size: 0.6rem }
 
-.extra-bold { font-weight: 800 }
+.ff-heading {
+  font-family: "Futura", "Futura LT", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+}
 
-.bg-white        { background-color: $white }
-.bg-off-white    { background-color: $off-white }
-.bg-light-grey   { background-color: $light-grey }
-.bg-black        { background-color: black }
-.bg-green        { background-color: $green }
-.bg-lime         { background-color: $lime }
+.extra-bold {
+  @extend .ff-heading;
+  font-weight: 800;
+}
+
+.bg-white      { background-color: $white }
+.bg-off-white  { background-color: $off-white }
+.bg-light-grey { background-color: $light-grey }
+.bg-dark-grey  { background-color: $dark-grey }
+.bg-black      { background-color: black }
+.bg-green      { background-color: $green }
+.bg-dark-green { background-color: $dark-green }
+.bg-lime       { background-color: $lime }
 
 .color-white      { color: $white }
 .color-dark-grey  { color: $dark-grey }
@@ -61,7 +73,12 @@ h6, .h6 { font-size: 0.6rem }
   box-shadow: 0 5px 20px rgba(black, 0.2);
 }
 
+.shadow-2 {
+  box-shadow: 0 -5px 20px rgba(black, 0.2);
+}
+
 .button {
+  cursor: pointer;
   display: inline-block;
   border-radius: 10em;
   padding: 0.5em 1em;
@@ -106,17 +123,35 @@ h6, .h6 { font-size: 0.6rem }
 }
 
 .asset-unit-render-2 {
-  background-image: url(/images/unit_render_2.jpeg);
-  background-position: center 40px;
+  background-image: url(/images/unit_render_2.png);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 60px 60px #0bca48;
   opacity: 0.5;
-  width: 50%;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  transform: scale(2);
+}
+
+#menu {
+  left: 0;
+  transform: translate(-100%, 100%);
+  transition: all 300ms ease;
+
+  &.open {
+    transform: translateY(100%);
+  } 
+}
+
+.square {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+  }
 }
