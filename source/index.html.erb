@@ -1,42 +1,54 @@
 <header class="flex items-center justify-center center bg-green shadow-1 relative overflow-hidden" style="height: 90vh">
-  <div class="mx-auto z2">
-    <%= image_tag "logo_white.png", style: "height: 8em" %>
-    <h1 class="extra-bold">applant.</h1>
-    <h2>aTree in your home</h2>
+  <div class="mx-auto z2 col-12 px3" style="max-width: 24em">
+    <%= image_tag "logo_white.svg", class: "col-12" %>
+    <h2 class="h3 nowrap">aTree in your home</h2>
   </div>
 
   <div class="asset-unit-render-2 mx-auto z1">
   </div>
 </header>
 
-<section class="bg-white color-green h2 extra-bold p4">
+<section class="bg-white color-green h3 md-h2 extra-bold p3 md-p4">
   <div class="flex flex-column items-center">
-    <div class="inline">
+    <form
+      class="inline"
+      id="form-mailchimp"
+      action="http://facebook.us13.list-manage.com/subscribe/post"
+      method="POST"
+      target="_blank">
+      <input type="hidden" name="u" value="81ddcd3ff2b5be5e8ae664f18">
+      <input type="hidden" name="id" value="4b766bd7dc">
+
       Dear Applant,<br/>
       <br/>
       I am
       <input
         class="input-reset border-bottom center color-green"
-        style="max-width: 6em;"
+        style="width: 6em"
+        type="email"
+        name="MERGE1"
       />
       and my email is
       <input
         class="input-reset border-bottom center color-green"
-        style="max-width: 6em;"
+        style="width: 6em"
+        name="MERGE0"
       />.<br/>
       I've always wanted to learn to grow!<br/>
       <br/>
-      <a class="button bg-green h3 color-white" href="#">
+      <button
+        class="button bg-green bold h4 md-h3 color-white"
+        type="submit">
         Sign me up!
-      </a>
-    </div>
+      </button>
+    </form>
   </div>
 </section>
 
 <%= partial "nav", locals: { url: "/" } %>
 
 <section class="bg-off-white color-dark-grey p4 relative" id="press">
-  <h2 class="extra-bold underline color-green center">As seen on</h2>
+  <h2 class="extra-bold h3 md-h2 underline color-green center">As seen on</h2>
   <div class="flex py4" style="overflow-x: scroll">
     <% press = [{
       logo: "forbes_logo.png",
@@ -56,7 +68,7 @@
     }] %>
     <% press.each do |article| %>
       <div class="flex flex-column px2 center">
-        <div class="mb2 bg-contain" style="background-image: url(/images/<%= article[:logo] %>); height: 3em; width: 100%; opacity: 0.4">
+        <div class="mb2 bg-contain col-12" style="background-image: url(/images/<%= article[:logo] %>); height: 3em; opacity: 0.4">
         </div>
         <p>
           <%= article[:content] %>
@@ -65,9 +77,9 @@
     <% end %>
   </div>
 
-  <div class="py4 mx-auto flex flex-wrap justify-around" style="max-width: 64em; width: 100%;">
-    <div class="col-12 md-col-4 mb4 md-m0" data-aos="fade-right">
-      <h3 class="color-green extra-bold underline mb2">Meet aTree</h3>
+  <div class="py4 mx-auto flex flex-wrap justify-around col-12" style="max-width: 64em">
+    <div class="col-12 md-col-6 mb4 md-m0" data-aos="fade-right">
+      <h3 class="color-green extra-bold underline mb2 center md-left-align">Meet aTree</h3>
       <p class="mb3">
         Applant has designed a beautiful vertical garden call aTree, which is perfect for urban households. It’s easy to use, low maintenence and allows you to grow 30 plants every month in the comfort of your own home.
       </p>
@@ -81,15 +93,17 @@
 </section>
 
 <section class="bg-green color-white shadow-2 relative z-2 p4">
-  <div class="flex flex-wrap justify-between items-center mx-auto" style="max-width: 64em; width: 100%;">
+  <div class="flex flex-wrap justify-between items-center col-12 mx-auto" style="max-width: 64em">
     <div class="col-12 md-col-6">
-      <h3 class="extra-bold underline mb2">Grow. Our lives depend on it.</h3>
+      <h3 class="extra-bold underline mb2 center md-left-align">Grow. Our lives depend on it.</h3>
       <p class="mb3">
         By 2050, the estimated population will be 9.5 billion people with most of that population growth in cities. We will need to produce 50% to 70% more food to feed everyone that is ef cient and sustainable <a href="http://www.worldbank.org/en/topic/foodsecurity" class="extra-bold">(source: worldbank)</a>.
       </p>
-      <a href="#" class="button bg-white color-green bold">
-        Sign up to be updated
-      </a>
+      <div class="center md-left-align">
+        <a href="#" class="button bg-white color-green bold">
+          Sign up to be updated
+        </a>
+      </div>
     </div>
     <div class="center flex flex-column justify-between mx-auto mt3 md-m0">
       <div>
@@ -111,8 +125,8 @@
 </section>
 
 <section class="bg-off-white color-dark-grey p4">
-  <div class="mx-auto" data-aos="zoom-in" style="max-width: 48em; width: 100%">
-    <h3 class="extra-bold underline color-green mb2">What is Vertical Farming?</h3>
+  <div class="mx-auto col-12" data-aos="zoom-in" style="max-width: 48em">
+    <h3 class="extra-bold underline color-green mb2 center md-left-align">What is Vertical Farming?</h3>
     <p class="mb3">
       Vertical farming is the practice of growing plants on a vertical plane in water, not soil. It’s called hydroponics. This technique is all about optimising space, allowing more plants to grow with less room required.
     </p>
@@ -122,7 +136,7 @@
   </div>
 </section>
 
-<section class="bg-white color-dark-grey center">
+<section class="bg-white color-dark-grey center" style="max-height: 40em">
   <div class="p4 relative z2">
     <h3 class="extra-bold underline color-green mb2">The Growing Possibilities...</h3>
     <p class="bold mb3">Under the right conditions - aTree will pay for itself in as little as a year.</p>
@@ -130,17 +144,17 @@
       What you can grow with applant
     </a>
   </div>
-  <%= image_tag "growing_possibilities.jpg", style: "margin-top: -8em; display: block; width: 100%" %>
+  <%= image_tag "growing_possibilities.jpg", class: "block col-12", style: "margin-top: -12em" %>
 </section>
 
-<section class="bg-black relative p4">
+<section class="bg-black relative py4 px3 overflow-hidden">
   <div class="absolute top-0 left-0 right-0 bottom-0 bg-cover" style="opacity: 0.3; background-image: url(/images/get_growing.jpg)">
   </div>
-  <div class="mx-auto p4 flex flex-wrap items-center justify-between relative z2" style="max-width: 48em; width: 100%">
-    <div class="md-col-6 col-12" data-aos="fade-right">
-      <h2 class="extra-bold">Are you ready<br/>to get <span class="color-green">growing?</span></h2>
+  <div class="mx-auto py4 px3 flex flex-wrap items-center justify-between relative z2 col-12" style="max-width: 40em">
+    <div class="md-col-6 col-12 center md-left-align" data-aos="fade-right">
+      <h2 class="extra-bold h3 md-h2">Are you ready<br/>to get <span class="color-green">growing?</span></h2>
     </div>
-    <div class="md-m0 mt3" data-aos="fade-left">
+    <div class="md-m0 mx-auto mt3" data-aos="fade-left">
       <p class="bold mb2">Pre-order now</p>
       <input
         class="input-reset color-white mb2 block pb1"

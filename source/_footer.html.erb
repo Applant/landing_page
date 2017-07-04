@@ -1,19 +1,26 @@
-<footer class="p3 bg-green h5 color-white">
-  <div class="flex justify-around items-center">
-    <div class="md-flex flex-wrap">
+<footer class="p2 bg-green h5 color-white">
+  <div class="md-flex justify-around items-center">
+    <div class="flex items-center justify-center md-col-5 nowrap">
       <a href="#" class="bold block m1">Press Inquiries</a>
       <a href="/terms" class="bold block m1">Terms of Use</a>
       <a href="/privacy" class="bold block m1">Privacy Policy</a>
     </div>
-    <a href="/">
-      <%= image_tag "logo_white.png", class: "mx3", style: "height: 4em" %>
+    <a class="xs-hide sm-hide mx3 md-col-2 flex justify-center" href="/">
+      <%= image_tag "husk_white.svg", height: "48" %>
     </a>
-    <div class="md-flex flex-wrap">
-      <a href="https://facebook.com/applanter" class="bold block m1">Facebook</a>
-      <a href="#" class="bold block m1">YouTube</a>
-      <a href="https://instagram.com/applant_" class="bold block m1">Instagram</a>
-      <a href="https://twitter.com/applant_" class="bold block m1">Twitter</a>
-      <a href="#" class="bold block m1">Email</a>
+    <div class="flex items-center justify-center md-justify-end mt3 md-m0 md-col-5">
+      <a href="https://facebook.com/applanter" class="bold block mx2 grow">
+        <%= image_tag "facebook.svg", height: "16" %>
+      </a>
+      <a href="https://instagram.com/applant_" class="bold block mx2 grow">
+        <%= image_tag "instagram.svg", height: "16" %>
+      </a>
+      <a href="https://twitter.com/applant_" class="bold block mx2 grow">
+        <%= image_tag "twitter.svg", height: "16" %>
+      </a>
     </div>
+    <a class="lg-hide md-hide mx3 flex items-center justify-center mt3" href="/">
+      <%= image_tag "husk_white.svg", height: "48" %>
+    </a>
   </div>
 </footer>

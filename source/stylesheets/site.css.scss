@@ -34,12 +34,44 @@ a {
 
 p, h1, h2, h3, h4, h5, h6 { line-height: 1.5 }
 
-h1, .h1 { font-size: 5rem }
+h1, .h1 { font-size: 3rem }
 h2, .h2 { font-size: 2rem }
 h3, .h3 { font-size: 1.5rem }
 h4, .h4 { font-size: 1rem }
 h5, .h5 { font-size: 0.8rem }
 h6, .h6 { font-size: 0.6rem }
+
+@media (min-width: 40em) {
+  .sm-h1 { font-size: 3rem }
+  .sm-h2 { font-size: 2rem }
+  .sm-h3 { font-size: 1.5rem }
+  .sm-h4 { font-size: 1rem }
+  .sm-h5 { font-size: 0.8rem }
+  .sm-h6 { font-size: 0.6rem }
+}
+  
+@media (min-width: 52em) {
+  .md-h1 { font-size: 3rem }
+  .md-h2 { font-size: 2rem }
+  .md-h3 { font-size: 1.5rem }
+  .md-h4 { font-size: 1rem }
+  .md-h5 { font-size: 0.8rem }
+  .md-h6 { font-size: 0.6rem }
+}
+  
+@media (min-width: 64em) {
+  .lg-h1 { font-size: 5rem }
+  .lg-h2 { font-size: 2rem }
+  .lg-h3 { font-size: 1.5rem }
+  .lg-h4 { font-size: 1rem }
+  .lg-h5 { font-size: 0.8rem }
+  .lg-h6 { font-size: 0.6rem }
+}
+
+@media (min-width: 52em) {
+  .md-justify-end { justify-content: flex-end }
+}
+  
 
 .ff-heading {
   font-family: "Futura", "Futura LT", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
@@ -83,6 +115,7 @@ h6, .h6 { font-size: 0.6rem }
   border-radius: 10em;
   padding: 0.5em 1em;
   transition: all 0.2s ease;
+  border: none;
 
   &:hover {
     transform: scale(1.05);
@@ -113,9 +146,9 @@ h6, .h6 { font-size: 0.6rem }
 }
 
 .asset-unit-render {
-  background-image: url(/images/unit_render.jpg);
-  background-position: 50% 10%;
-  background-size: 200%;
+  background-image: url(/images/unit_render_crop.png);
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 50%;
   margin-top: -4em;
@@ -153,5 +186,22 @@ h6, .h6 { font-size: 0.6rem }
     display: block;
     width: 100%;
     padding-top: 100%;
+  }
+}
+
+.hamburger {
+  opacity: 0.8;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.grow {
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
   }
 }
