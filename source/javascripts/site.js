@@ -45,7 +45,7 @@ function initPressSlider() {
 
     $(slides[i]).css({ opacity: 0, 'margin-left': '100%' });
     $(slides[i]).animate({ opacity: 1, 'margin-left': '0' }, 200);
-  }, 5000);
+  }, 4000);
 }
 
 function bindAtreeNav() {
