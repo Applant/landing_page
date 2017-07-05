@@ -48,33 +48,36 @@
 <%= partial "nav", locals: { url: "/" } %>
 
 <section class="bg-off-white color-dark-grey p4 relative" id="press">
-  <h2 class="extra-bold h3 md-h2 underline color-green center">As seen on</h2>
-  <div class="flex py4" style="overflow-x: scroll">
-    <% press = [{
-      logo: "forbes_logo.png",
-      content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
-    }, {
-      logo: "broadsheet_logo.png",
-      content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
-    }, {
-      logo: "vice_logo.png",
-      content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
-    }, {
-      logo: "wired_logo.png",
-      content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
-    }, {
-      logo: "techcrunch_logo.jpg",
-      content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
-    }] %>
-    <% press.each do |article| %>
-      <div class="flex flex-column px2 center">
-        <div class="mb2 bg-contain col-12" style="background-image: url(/images/<%= article[:logo] %>); height: 3em; opacity: 0.4">
+  <div class="mx-auto col-12 relative overflow-hidden" style="max-width: 64em">
+    <h2 class="extra-bold h3 md-h2 underline color-green center">As seen on</h2>
+    <div class="flex flex-wrap justify-center my3" style="min-height: 15em" id="press-slider">
+      <% press = [{
+        logo: "forbes_logo.png",
+        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
+      }, {
+        logo: "broadsheet.svg",
+        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
+      }, {
+        logo: "vice_logo.png",
+        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
+      }, {
+        logo: "wired_logo.png",
+        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
+      }, {
+        logo: "techcrunch.png",
+        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
+      }] %>
+      <% press.each do |article| %>
+        <div class="flex flex-column col-12 p3 center absolute">
+          <div class="mb1 bg-contain col-12" style="background-image: url(/images/<%= article[:logo] %>); height: 3em; opacity: 0.4">
+          </div>
+          <div class="col-1 mx-auto border-bottom my2" style="border-color: #ccc"></div>
+          <p>
+            <%= article[:content] %>
+          </p>
         </div>
-        <p>
-          <%= article[:content] %>
-        </p>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 
   <div class="py4 mx-auto flex flex-wrap justify-around col-12" style="max-width: 64em">
