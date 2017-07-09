@@ -12,6 +12,7 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page "/signup.html", :layout => "signup"
 
 activate :directory_indexes
 
