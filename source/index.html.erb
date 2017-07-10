@@ -4,7 +4,7 @@
     <h2 class="h3 nowrap">aTree in your home</h2>
   </div>
 
-  <video autoplay loop width="100%" class="video-timelapse" style="opacity: 0.4">
+  <video autoplay loop width="100%" class="video-timelapse" style="opacity: 0.4" poster="images/timelapse_thumb.png">
     <source src="videos/timelapse.mp4"/>
   </video>
 </header>
@@ -53,28 +53,23 @@
     <h2 class="extra-bold h3 md-h2 underline color-green center">As seen on</h2>
     <div class="flex flex-wrap justify-center my3" style="min-height: 15em" id="press-slider">
       <% press = [{
-        logo: "forbes_logo.png",
-        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
+        logo: "gineers_logo.png",
+        url: "https://www.gineersnow.com/community/story/applant-releasing-first-indoor-vertical-farm-atree/",
+        content: "aTree is a reliable, personal food source."
       }, {
-        logo: "broadsheet.svg",
-        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
-      }, {
-        logo: "vice_logo.png",
-        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
-      }, {
-        logo: "wired_logo.png",
-        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
-      }, {
-        logo: "techcrunch.png",
-        content: "Ihilluptat. Di alibusc ipsunte mporro blam nonseque enihili gni- mus, solores cientur?"
+        logo: "stock_land_logo.png",
+        url: "http://www.stockandland.com.au/story/4756625/vertical-farm-hits-the-market/?cs=4786#slide=1",
+        content: "This technology can decrease farmers’ reliance on the weather."
       }] %>
       <% press.each do |article| %>
         <div class="flex flex-column col-12 p3 center absolute left-0">
-          <div class="mb1 bg-contain col-12" style="background-image: url(/images/<%= article[:logo] %>); height: 3em; opacity: 0.4">
-          </div>
+          <a href="<%= article[:url] %>">
+            <div class="mb1 bg-contain col-12" style="background-image: url(/images/<%= article[:logo] %>); height: 3em; opacity: 0.4">
+            </div>
+          </a>
           <div class="col-1 mx-auto border-bottom my2" style="border-color: #ccc"></div>
           <p>
-            <%= article[:content] %>
+            "<%= article[:content] %>"
           </p>
         </div>
       <% end %>
@@ -128,7 +123,7 @@
   </div>
 </section>
 
-<section class="bg-off-white color-dark-grey p4"> <div class="mx-auto col-12" data-aos="zoom-in" style="max-width: 48em">
+<section class="bg-white color-dark-grey p4"> <div class="mx-auto col-12" data-aos="zoom-in" style="max-width: 48em">
     <h3 class="extra-bold underline color-green mb2 center md-left-align">What is vertical gardening?</h3>
     <p class="mb3">
       Vertical gardening grows plants on a vertical garden bed, where plants are fed with water, not soil. It’s called aeroponics, a subset of hydroponics. This technique optimises nutrient delivery, using 95% less water whilst growing more plants up.
@@ -139,7 +134,7 @@
   </div>
 </section>
 
-<section class="bg-white color-dark-grey center" style="max-height: 40em">
+<section class="bg-off-white color-dark-grey center" style="max-height: 40em">
   <div class="p4 relative z2">
     <h3 class="extra-bold underline color-green mb2">The growing possibilities...</h3>
     <p class="bold mb3">
@@ -161,13 +156,37 @@
       <h2 class="extra-bold h3 md-h2">Are you ready<br/>to get <span class="color-green">growing?</span></h2>
     </div>
     <div class="md-m0 mx-auto mt3" data-aos="fade-left">
-      <p class="bold mb2">Pre-order now</p>
-      <input
-        class="input-reset color-white mb2 block pb1"
-        style="width: 12em"
-        placeholder="you@mail.com"
-      />
-      <a href="#" class="button bg-green h5 bold">Submit</a>
+      <form
+        class="inline"
+        id="form-mailchimp"
+        action="http://facebook.us13.list-manage.com/subscribe/post"
+        method="POST"
+        target="_blank">
+        <input type="hidden" name="u" value="81ddcd3ff2b5be5e8ae664f18">
+        <input type="hidden" name="id" value="4b766bd7dc">
+
+        <p class="bold mb2">Pre-order now</p>
+
+        <input
+          class="input-reset color-white mb2 block pb1"
+          style="width: 12em"
+          name="MERGE1"
+          placeholder="Name"
+        />
+
+        <input
+          class="input-reset color-white mb2 block pb1"
+          style="width: 12em"
+          name="MERGE0"
+          placeholder="you@mail.com"
+        />
+
+        <button
+          class="button bg-green bold h5 color-white"
+          type="submit">
+          Submit
+        </button>
+      </form>
     </div>
   </div>
 </section>
