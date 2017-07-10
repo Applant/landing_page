@@ -1,6 +1,7 @@
 $(function() {
   initStickyNav();
   initPressSlider();
+  initCounters();
   bindAtreeNav();
   bindHamburger();
 
@@ -48,6 +49,20 @@ function initPressSlider() {
   }, 4000);
 }
 
+function initCounters() {
+  var $hungerCounter = $('#hunger-counter');
+  var date = new Date();
+  var seconds = date.getSeconds() + (60 * (date.getMinutes() + (60 * date.getHours())));
+
+  var hungerVal = parseInt(seconds / 4);
+  $hungerCounter.html(numberWithCommas(hungerVal));
+
+  setInterval(function() {
+    hungerVal++;
+    $hungerCounter.html(numberWithCommas(hungerVal));
+  }, 4000);
+}
+
 function bindAtreeNav() {
   $('#specs-nav').click(function() {
     $('.specs-section').show();
@@ -64,4 +79,8 @@ function bindHamburger() {
   $('#hamburger').click(function() {
     $('#menu').toggleClass('open');
   });
+}
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

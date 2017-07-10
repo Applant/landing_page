@@ -12,22 +12,21 @@ function maind(){
 
 
 function ChangeValue(number,pv){
-      numberstring =""
-      var j=0 
-      var i=0
-      while (number > 1)
-         { 
+  numberstring = ""
+  var j = 0
+  var i = 0
+  while (number > 1) { 
+    numberstring = (Math.round(number-0.5) % 10) + numberstring
+    number = number / 10
+    j++
+    if (number > 1 && j==3) { 
+      numberstring = "," + numberstring 
+      j = 0
+    }
+    i++
+  }
 
-                   numberstring = (Math.round(number-0.5) % 10) + numberstring
-                   number= number / 10
-                   j++
-                   if (number > 1 && j==3) { 
-                                 numberstring = "," + numberstring 
-                                 j=0}
-                   i++
-                }
-
-       numberstring=numberstring
+   numberstring=numberstring
 
   if (pv==1) {document.getElementById("worldpop").innerHTML=numberstring }
 }
