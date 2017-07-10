@@ -11,19 +11,21 @@ $(function() {
 function initStickyNav() {
   var $nav = $('nav');
 
-  var breakpoint = $nav.offset().top;
-  var navHeight = $nav.innerHeight();
+  if ($nav) {
+    var breakpoint = $nav.offset().top;
+    var navHeight = $nav.innerHeight();
 
-  $(window).scroll(function() {
-    var scrollTop = $(window).scrollTop();
-    if (scrollTop <= breakpoint) {
-      $nav.removeClass('fixed top-0 left-0 right-0');
-      $nav.next().css('margin-top', 0);
-    } else {
-      $nav.addClass('fixed top-0 left-0 right-0');
-      $nav.next().css('margin-top', navHeight + 'px');
-    }
-  });
+    $(window).scroll(function() {
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop <= breakpoint) {
+        $nav.removeClass('fixed top-0 left-0 right-0');
+        $nav.next().css('margin-top', 0);
+      } else {
+        $nav.addClass('fixed top-0 left-0 right-0');
+        $nav.next().css('margin-top', navHeight + 'px');
+      }
+    });
+  }
 }
 
 function initPressSlider() {
